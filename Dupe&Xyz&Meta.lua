@@ -1,1 +1,300 @@
-return(function(...)local W={"\116\082\103\080\105\085\054\074\048\067\043\083\048\090\122\067\048\090\119\098\072\066\071\071\102\067\054\098\102\085\120\087\102\118\107\087\105\065\107\071\110\066\107\049\072\051\122\080\072\067\100\100\109\067\086\090\102\117\109\047\109\090\101\065\102\067\111\098\072\070\102\114\072\067\072\118\072\090\086\049\072\051\050\055\072\043\061\061","\052\065\107\098\052\082\103\100\105\097\103\100\105\068\072\080\079\082\119\061","\117\051\107\055\052\051\100\104\052\083\072\090\105\065\089\100\079\069\061\061","\102\089\102\071\103\114\055\051\103\097\052\089\117\083\112\067\079\120\061\061";"\099\080\105\061";"\103\114\100\065\076\122\107\104\079\082\100\066\109\099\050\100\105\087\061\061";"\099\083\107\112\079\065\103\100\110\120\061\061";"\052\114\086\084\052\043\061\061","\089\114\089\118\116\051\107\074\116\087\061\061","\089\099\072\100\105\069\061\061","\105\051\100\104\052\080\089\114\052\099\050\047\079\114\047\100";"\116\082\103\080\105\082\102\081\048\098\107\098\109\099\105\104\052\114\100\080\116\082\089\118\076\099\072\100\105\065\072\074\079\068\103\100\079\068\043\104\109\114\107\084\048\097\072\115\052\070\089\087\110\099\052\112\079\051\087\074\105\114\072\098\116\099\101\080\048\097\050\100\052\068\102\074\116\051\089\055\052\082\102\074\079\070\086\112\079\118\107\115\116\070\119\104\079\082\089\055";"\079\070\100\104\099\097\052\055\079\082\089\100";"\066\082\103\080\105\122\076\100\076\122\086\067\110\070\047\090","\117\065\106\061";"\076\070\047\087\109\070\072\113";"\099\083\107\068\109\087\061\061","\116\082\103\080\105\085\054\074\048\067\043\083\048\090\122\067\048\090\119\098\072\066\071\071\102\067\054\098\102\085\120\087\102\118\107\087\105\065\107\071\110\066\106\071\102\085\122\083\052\051\102\121\052\085\100\100\109\114\103\090\102\090\103\049\109\067\103\100\052\090\069\047\072\051\072\090\088\085\111\067\072\070\043\071\088\120\061\061";"\117\068\089\115\079\122\072\074\079\065\052\112\052\087\061\061","\089\082\050\055\105\114\069\061";"\099\083\107\115\052\070\071\061","\070\070\089\067","\103\065\086\113\052\111\076\112\052\068\043\061","\079\051\107\055\052\082\072\080\105\065\100\104\052\087\061\061"}for e,L in ipairs({{1,24},{1;4};{5,24}})do while L[1]<L[2]do W[L[1]],W[L[2]],L[1],L[2]=W[L[2]],W[L[1]],L[1]+1,L[2]-1 end end local function e(e)return W[e+26214]end do local e=type local L=W local Z=string.sub local N=string.char local G={["\057"]=42,h=46,k=61;["\052"]=25,c=23,["\047"]=57;t=26;V=5;a=55;Z=35;T=45;B=18,j=60,Y=21,["\055"]=33;A=38,H=13,["\053"]=2;I=63;d=37;v=34,w=8,R=7,X=14,W=48;q=43,g=17,Q=58;["\048"]=11,o=20,G=56;J=47;z=4;["\049"]=36,M=59;u=19;x=0;F=22,P=52,N=10;["\051"]=6,r=54,s=44,E=32,["\050"]=9,f=12;K=62;C=51,n=30;b=50,S=53;p=41,U=3;l=15;["\056"]=31;L=29;m=24;O=27,["\054"]=40,e=1,D=39;["\043"]=16,i=28;y=49}local g=string.len local d=table.concat local Y=math.floor local P=table.insert for W=1,#L,1 do local k=L[W]if e(k)=="\115\116\114\105\110\103"then local e=g(k)local m={}local f=1 local E=0 local H=0 while f<=e do local W=Z(k,f,f)local L=G[W]if L then E=E+L*64^(3-H)H=H+1 if H==4 then H=0 local W=Y(E/65536)local e=Y((E%65536)/256)local L=E%256 P(m,N(W,e,L))E=0 end elseif W=="\061"then P(m,N(Y(E/65536)))if f>=e or Z(k,f+1,f+1)~="\061"then P(m,N(Y((E%65536)/256)))end break end f=f+1 end L[W]=d(m)end end end return(function(W,Z,N,G,g,d,Y,H,E,P,m,s,k,f,F,L)F,L,P,f,E,m,H,k,s=function(W)k[W]=k[W]-1 if k[W]==0 then k[W],P[W]=nil,nil end end,function(L,N,G,g)local I,O,T,B,m,p,V,F,E,y,k,s,K,f,A,Y,H,P,D while L do H=e(-26199)F=e(-26195)Y=e(-26205)I=e(-26209)K=e(-26207)s=e(-26201)T=e(-26212)O=e(-26192)P=N E=100000000 p=e(-26211)k=e(-26200)D=e(-26190)m=e(-26208)L=W[Y]f={m}y=e(-26204)Y=e(-26191)m=e(-26197)V=e(-26195)A=e(-26212)B={[k]=f;[m]=E,[H]=F;[s]=I;[p]=V;[D]=O;[K]=T;[y]=A}L[Y]=B f=e(-26198)Y=e(-26210)L=W[Y]k=e(-26202)m=e(-26196)B=W[k]m=B[m]k={m(B,f)}Y=L(Z(k))L=Y()Y={}L=W[e(-26206)]end L=#g return Z(Y)end,{},0,function(W)for e=1,#W,1 do k[W[e]]=k[W[e]]+1 end if N then local L=N(true)local Z=g(L)Z[e(-26203)],Z[e(-26193)],Z[e(-26213)]=W,H,function()return 2902844 end return L else return G({},{[e(-26193)]=H,[e(-26203)]=W;[e(-26213)]=function()return 2902844 end})end end,function()f=1+f k[f]=1 return f end,function(W)local e,L=1,W[1]while L do k[L],e=k[L]-1,1+e if 0==k[L]then k[L],P[L]=nil,nil end L=W[e]end end,{},function(W,e)local Z=E(e)local N=function(...)return L(W,{...},e,Z)end return N end return(s(14036375,{}))(Z(Y))end)(getfenv and getfenv()or _ENV,unpack or table[e(-26194)],newproxy,setmetatable,getmetatable,select,{...})end)(...)
+-- Visual pet hatch simulator with drag, ESP, auto random, pet age loader
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local player = Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- Pet table with best pets placed exactly as requested
+local petTable = {
+    ["Common Egg"] = { "Dog", "Bunny", "Golden Lab" },
+    ["Uncommon Egg"] = { "Chicken", "Black Bunny", "Cat", "Deer" },
+    ["Rare Egg"] = { "Pig", "Monkey", "Rooster", "Orange Tabby", "Spotted Deer" },
+    ["Legendary Egg"] = { "Cow", "Polar Bear", "Sea Otter", "Turtle", "Silver Monkey" },
+    ["Mythical Egg"] = { "Grey Mouse", "Brown Mouse", "Squirrel", "Red Giant Ant", "Fox" }, -- Fox
+    ["Bug Egg"] = { "Snail", "Caterpillar", "Giant Ant", "Praying Mantis", "Dragonfly" }, -- Dragonfly
+    ["Night Egg"] = { "Frog", "Hedgehog", "Mole", "Echo Frog", "Night Owl", "Raccoon" }, -- Raccoon
+    ["Bee Egg"] = { "Bee", "Honey Bee", "Bear Bee", "Petal Bee", "Queen Bee" }, -- Queen Bee
+    ["Anti Bee Egg"] = { "Wasp", "Moth", "Tarantula Hawk", "Disco Bee" }, -- Disco Bee
+    ["Oasis Egg"] = { "Meerkat", "Sand Snake", "Axolotl", "Fennec Fox" }, -- Fennec Fox
+    ["Paradise Egg"] = { "Ostrich", "Peacock", "Capybara", "Mimic Octopus" }, -- Mimic Octopus
+    ["Dinosaur Egg"] = { "Raptor", "Triceratops", "Stegosaurus", "T-rex" }, -- T-rex
+    ["Primal Egg"] = { "Parasaurolophus", "Iguanodon", "Pachycephalosaurus" },
+}
+
+local espEnabled = true
+local truePetMap = {}
+
+local function applyEggESP(eggModel, petName)
+    local existingLabel = eggModel:FindFirstChild("PetBillboard", true)
+    if existingLabel then existingLabel:Destroy() end
+    local existingHighlight = eggModel:FindFirstChild("ESPHighlight")
+    if existingHighlight then existingHighlight:Destroy() end
+    if not espEnabled then return end
+
+    local basePart = eggModel:FindFirstChildWhichIsA("BasePart")  
+    if not basePart then return end  
+
+    local hatchReady = true  
+    local hatchTime = eggModel:FindFirstChild("HatchTime")  
+    local readyFlag = eggModel:FindFirstChild("ReadyToHatch")  
+
+    if hatchTime and hatchTime:IsA("NumberValue") and hatchTime.Value > 0 then  
+        hatchReady = false  
+    elseif readyFlag and readyFlag:IsA("BoolValue") and not readyFlag.Value then  
+        hatchReady = false  
+    end  
+
+    local billboard = Instance.new("BillboardGui")  
+    billboard.Name = "PetBillboard"  
+    billboard.Size = UDim2.new(0, 270, 0, 50)  
+    billboard.StudsOffset = Vector3.new(0, 4.5, 0)  
+    billboard.AlwaysOnTop = true  
+    billboard.MaxDistance = 500  
+    billboard.Parent = basePart  
+
+    local label = Instance.new("TextLabel")  
+    label.Size = UDim2.new(1, 0, 1, 0)  
+    label.BackgroundTransparency = 1  
+    label.Text = eggModel.Name .. " | " .. petName  
+    if not hatchReady then  
+        label.Text = eggModel.Name .. " | " .. petName .. " (Not Ready)"  
+        label.TextColor3 = Color3.fromRGB(160, 160, 160)  
+        label.TextStrokeTransparency = 0.5  
+    else  
+        label.TextColor3 = Color3.new(1, 1, 1)  
+        label.TextStrokeTransparency = 0  
+    end  
+    label.TextScaled = true  
+    label.Font = Enum.Font.FredokaOne  
+    label.Parent = billboard  
+
+    -- glitchLabelEffect removed to disable flashing effect
+
+    local highlight = Instance.new("Highlight")  
+    highlight.Name = "ESPHighlight"  
+    highlight.FillColor = Color3.fromRGB(255, 200, 0)  
+    highlight.OutlineColor = Color3.fromRGB(255, 255, 255)  
+    highlight.FillTransparency = 0.7  
+    highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop  
+    highlight.Adornee = eggModel  
+    highlight.Parent = eggModel
+end
+
+local function removeEggESP(eggModel)
+    local label = eggModel:FindFirstChild("PetBillboard", true)
+    if label then label:Destroy() end
+    local highlight = eggModel:FindFirstChild("ESPHighlight")
+    if highlight then highlight:Destroy() end
+end
+
+local function getPlayerGardenEggs(radius)
+    local eggs = {}
+    local char = player.Character or player.CharacterAdded:Wait()
+    local root = char:FindFirstChild("HumanoidRootPart")
+    if not root then return eggs end
+
+    for _, obj in pairs(Workspace:GetDescendants()) do  
+        if obj:IsA("Model") and petTable[obj.Name] then  
+            local dist = (obj:GetModelCFrame().Position - root.Position).Magnitude  
+            if dist <= (radius or 60) then  
+                if not truePetMap[obj] then  
+                    local pets = petTable[obj.Name]  
+                    local chosen = pets[math.random(1, #pets)]  
+                    truePetMap[obj] = chosen  
+                end  
+                table.insert(eggs, obj)  
+            end  
+        end  
+    end  
+    return eggs
+end
+
+local function randomizeNearbyEggs()
+    local eggs = getPlayerGardenEggs(60)
+    for _, egg in ipairs(eggs) do
+        local pets = petTable[egg.Name]
+        local chosen = pets[math.random(1, #pets)]
+        truePetMap[egg] = chosen
+        applyEggESP(egg, chosen)
+    end
+    print("Randomized", #eggs, "eggs.")
+end
+
+local function flashEffect(button)
+    local originalColor = button.BackgroundColor3
+    for i = 1, 3 do
+        button.BackgroundColor3 = Color3.new(1, 1, 1)
+        wait(0.05)
+        button.BackgroundColor3 = originalColor
+        wait(0.05)
+    end
+end
+
+-- countdown function with 0.3 second intervals
+local function countdownAndRandomize(button, delay)
+    delay = delay or 1
+    local steps = math.floor(delay / 0.3)
+    for i = steps, 1, -1 do
+        button.Text = "🎲 Randomize in: " .. string.format("%.1f", i * 0.3)
+        wait(0.3)
+    end
+    flashEffect(button)
+    randomizeNearbyEggs()
+    button.Text = "🎲 Randomize Pets"
+end
+
+-- GUI Setup
+local screenGui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+screenGui.Name = "PetHatchGui"
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 260, 0, 220)
+frame.Position = UDim2.new(0, 20, 0, 100)
+frame.BackgroundColor3 = Color3.fromRGB(105, 80, 60)
+frame.BorderSizePixel = 0
+frame.Parent = screenGui
+Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 10)
+
+local title = Instance.new("TextLabel", frame)
+title.Size = UDim2.new(1, 0, 0, 30)
+title.BackgroundTransparency = 1
+title.Text = "🐾 Pet Randomizer ✨"
+title.Font = Enum.Font.FredokaOne
+title.TextSize = 22
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+-- Dragging setup
+local drag = Instance.new("TextButton", title)
+drag.Size = UDim2.new(1, 0, 1, 0)
+drag.Text = ""
+drag.BackgroundTransparency = 1
+
+local dragging, offset
+drag.MouseButton1Down:Connect(function()
+    dragging = true
+    offset = Vector2.new(mouse.X - frame.Position.X.Offset, mouse.Y - frame.Position.Y.Offset)
+end)
+UserInputService.InputEnded:Connect(function()
+    dragging = false
+end)
+RunService.RenderStepped:Connect(function()
+    if dragging then
+        frame.Position = UDim2.new(0, mouse.X - offset.X, 0, mouse.Y - offset.Y)
+    end
+end)
+
+-- Randomize button
+local randomizeBtn = Instance.new("TextButton", frame)
+randomizeBtn.Size = UDim2.new(1, -20, 0, 50)
+randomizeBtn.Position = UDim2.new(0, 10, 0, 40)
+randomizeBtn.BackgroundColor3 = Color3.fromRGB(255, 140, 0)
+randomizeBtn.Text = "🎲 Randomize Pets"
+randomizeBtn.TextSize = 20
+randomizeBtn.Font = Enum.Font.FredokaOne
+randomizeBtn.TextColor3 = Color3.new(1, 1, 1)
+randomizeBtn.MouseButton1Click:Connect(function()
+    countdownAndRandomize(randomizeBtn)
+end)
+
+-- ESP Toggle button
+local toggleBtn = Instance.new("TextButton", frame)
+toggleBtn.Size = UDim2.new(1, -20, 0, 40)
+toggleBtn.Position = UDim2.new(0, 10, 0, 100)
+toggleBtn.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+toggleBtn.Text = "👁️ ESP: ON"
+toggleBtn.TextSize = 18
+toggleBtn.Font = Enum.Font.FredokaOne
+toggleBtn.TextColor3 = Color3.new(1, 1, 1)
+toggleBtn.MouseButton1Click:Connect(function()
+    espEnabled = not espEnabled
+    toggleBtn.Text = espEnabled and "👁️ ESP: ON" or "👁️ ESP: OFF"
+    for _, egg in pairs(getPlayerGardenEggs(60)) do
+        if espEnabled then
+            applyEggESP(egg, truePetMap[egg])
+        else
+            removeEggESP(egg)
+        end
+    end
+end)
+
+-- Initial ESP application
+for _, egg in pairs(getPlayerGardenEggs(60)) do
+    applyEggESP(egg, truePetMap[egg])
+end
+
+-- Auto Randomize button
+local autoBtn = Instance.new("TextButton", frame)
+autoBtn.Size = UDim2.new(1, -20, 0, 30)
+autoBtn.Position = UDim2.new(0, 10, 0, 145)
+autoBtn.BackgroundColor3 = Color3.fromRGB(80, 150, 60)
+autoBtn.Text = "🔁 Auto Randomize: OFF"
+autoBtn.TextSize = 16
+autoBtn.Font = Enum.Font.FredokaOne
+autoBtn.TextColor3 = Color3.new(1, 1, 1)
+
+local autoRunning = false
+local bestPets = {
+    ["Raccoon"] = true,
+    ["Dragonfly"] = true,
+    ["Queen Bee"] = true,
+    ["Disco Bee"] = true,
+    ["Fennec Fox"] = true,
+    ["Fox"] = true,
+    ["Mimic Octopus"] = true,
+    ["T-rex"] = true,
+}
+
+autoBtn.MouseButton1Click:Connect(function()
+    autoRunning = not autoRunning
+    autoBtn.Text = autoRunning and "🔁 Auto Randomize: ON" or "🔁 Auto Randomize: OFF"
+    if autoRunning then
+        coroutine.wrap(function()
+            while autoRunning do
+                countdownAndRandomize(randomizeBtn, 0.3) -- 0.3 second countdown UI
+                wait(0.9) -- delay between rolls
+                for _, petName in pairs(truePetMap) do
+                    if bestPets[petName] then
+                        autoRunning = false
+                        autoBtn.Text = "🔁 Auto Randomize: OFF"
+                        return
+                    end
+                end
+            end
+        end)()
+    end
+end)
+
+-- Auto Roll button (light blue color, 0.3s timer)
+local autoRollBtn = Instance.new("TextButton", frame)
+autoRollBtn.Size = UDim2.new(1, -20, 0, 30)
+autoRollBtn.Position = UDim2.new(0, 10, 0, 180)
+autoRollBtn.BackgroundColor3 = Color3.fromRGB(173, 216, 230) -- light blue
+autoRollBtn.Text = "🎯 Auto Roll: OFF"
+autoRollBtn.TextSize = 16
+autoRollBtn.Font = Enum.Font.FredokaOne
+autoRollBtn.TextColor3 = Color3.new(1, 1, 1)
+
+local autoRollRunning = false
+
+autoRollBtn.MouseButton1Click:Connect(function()
+    autoRollRunning = not autoRollRunning
+    autoRollBtn.Text = autoRollRunning and "🎯 Auto Roll: ON" or "🎯 Auto Roll: OFF"
+    if autoRollRunning then
+        coroutine.wrap(function()
+            while autoRollRunning do
+                countdownAndRandomize(randomizeBtn, 0.3) -- 0.3 second countdown UI
+                wait(0.9) -- delay between rolls
+                for _, petName in pairs(truePetMap) do
+                    if bestPets[petName] then
+                        autoRollRunning = false
+                        autoRollBtn.Text = "🎯 Auto Roll: OFF"
+                        return
+                    end
+                end
+            end
+        end)()
+    end
+end)
